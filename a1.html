@@ -1,0 +1,49 @@
+<html>
+
+<head></head>
+
+<body style="background-color: antiquewhite;">
+    <h1 style=" text-align: center;" >
+
+
+    </h1>
+    <mark id="my" style="color: rgb(89, 254, 6); text-shadow: 1px 1px 1px black; font-size: 40px;" ></mark>
+    <i id="my1" style="color: rgb(246, 180, 12); text-shadow: 1px 1px 1px black; font-size: 30px;"></i>
+    <strong id="my2"></strong>
+<button onclick="myfunction()">accept our greet</button><br>
+    <script>
+        function myfunction() {
+            var greeting;
+            var time= new Date().getHours();
+
+            if (time<12){
+                greeting= "GOOD MORNING"
+            }
+
+            else if (time<16){
+                greeting= "GOOD AFTERNOON"
+            }
+
+            else {
+                greeting="GOOD EVENING"
+            }
+
+            document.getElementById("my").innerHTML="<br>current Hour is:"+time
+            document.getElementById("my1").innerHTML= greeting;
+        }
+
+        var text="";
+        var i=1;
+        while(i<25) {
+            text += "<br><br> Time in 24 hr system" +i;
+            i++;
+
+        }
+        document.getElementById("my2").innerHTML=text;
+
+
+        
+    </script>
+</body>
+
+</html>
