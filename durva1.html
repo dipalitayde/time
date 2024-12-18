@@ -1,0 +1,81 @@
+<html>
+    <head></head>
+    <body style="background-color: antiquewhite;">
+        <p id="my" style="color: rgb(149, 0, 255);  font-family: cursive; font-size: 20px; text-shadow: 1px 1px  black;"></p>
+        <h3  id="my1" style="color: rgb(149, 0, 255);  font-family: cursive; font-size: 20px;text-shadow: 1px 1px  black;"></h3>
+        <i id="my2" style="color: rgb(149, 0, 255);  font-family: cursive; font-size: 20px;text-shadow: 1px 1px  black; "></i>
+        <h4 id="my3" style="color: rgb(149, 0, 255);  font-family: cursive; font-size: 20px; text-shadow: 1px 1px  black;"></h4>
+        <h5 id="my4" style="color: rgb(149, 0, 255);  font-family:cursive; font-size: 20px; text-shadow: 1px 1px  black;"></h5>
+        <h2 id="my5" style="color: rgb(149, 0, 255);  font-family: cursive; font-size: 20px; text-shadow: 1px 1px  black;"></h2>
+        <script>
+            class student{
+                constructor(name,year,) {
+                    this.studentname = name;
+                this.name= name
+                this .year= year
+                }
+
+                 age() {
+                    let date = new Date();
+                    return date.getFullYear() - this.year;
+                }
+
+                static hello(){
+                    return "HELLO💛";
+                }
+                 static welcome(x) {
+                    return " WELCOME " + x.studentname;
+                }
+
+                hi() {
+                    return " Hi " + this.studentname;
+                }
+                
+
+
+
+
+            } 
+
+             student1 = new student("Dipali", 2009)
+                student2 = new student("Riya", 2006)
+
+                document.getElementById("my3").innerHTML = " My name is " + student1.name + " and i am " + student1.age() + "Year old"
+                document.getElementById("my4").innerHTML = "  AND My name is " + student2.name + " and i am " + student2.age() + "Year old  !! Very nice to meet you♥️ !"
+
+                myname = new student("sweetheart♥️");
+                document.getElementById("my").innerHTML = student.hello();
+                document.getElementById("my1").innerHTML = myname.hi();
+                document.getElementById("my2").innerHTML = student.welcome(myname);
+    class car {
+        constructor(brand) {
+            this.carname = brand;
+
+        }
+
+        present() {
+            return 'We have a ' + this.carname;
+
+        }
+
+
+    }
+
+    class Models extends car {
+        constructor(brand, mod) {
+            super(brand);
+            this.model = mod;
+        }
+
+        show() {
+            return this.present() + ' But We  both like' + this.model; 
+        }
+    }
+
+    let mycar = new Models("suzuki", " ferrari");
+    document.getElementById("my5").innerHTML = mycar.show(); 
+
+                
+        </script>
+    </body>
+</html>
